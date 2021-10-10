@@ -1,0 +1,165 @@
+{
+	"info": {
+		"_postman_id": "6e80e081-1260-4af5-87e8-e0bf8f1c9c56",
+		"name": "Covid 19",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get Auth Token",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"key\": \"apitest\",\r\n  \"email\": \"jayasri85@outlook.com\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://supervillain.herokuapp.com/auth/gentoken",
+					"protocol": "https",
+					"host": [
+						"supervillain",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"auth",
+						"gentoken"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Verify token",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJrZXkiOiJhcGl0ZXN0IiwiZW1haWwiOiJqYXlhc3JpODVAb3V0bG9vay5jb20iLCJpYXQiOjE2MzM3MzkwNDMsImV4cCI6MTYzMzk5ODI0M30._NZaXvHshuQ0WV_f7e1u60toog98a3t1WcAAy8Hdh60",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://supervillain.herokuapp.com/auth/verifytoken",
+					"protocol": "https",
+					"host": [
+						"supervillain",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"auth",
+						"verifytoken"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Users",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJrZXkiOiJhcGl0ZXN0IiwiZW1haWwiOiJqYXlhc3JpODVAb3V0bG9vay5jb20iLCJpYXQiOjE2MzM3MzkwNDMsImV4cCI6MTYzMzk5ODI0M30._NZaXvHshuQ0WV_f7e1u60toog98a3t1WcAAy8Hdh60",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://supervillain.herokuapp.com/v1/user",
+					"protocol": "https",
+					"host": [
+						"supervillain",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"v1",
+						"user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add User",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJrZXkiOiJhcGl0ZXN0IiwiZW1haWwiOiJqYXlhc3JpODVAb3V0bG9vay5jb20iLCJpYXQiOjE2MzM3MzkwNDMsImV4cCI6MTYzMzk5ODI0M30._NZaXvHshuQ0WV_f7e1u60toog98a3t1WcAAy8Hdh60",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"username3\",\r\n    \"score\": 0\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://supervillain.herokuapp.com/v1/user",
+					"protocol": "https",
+					"host": [
+						"supervillain",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"v1",
+						"user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update User",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJrZXkiOiJhcGl0ZXN0IiwiZW1haWwiOiJqYXlhc3JpODVAb3V0bG9vay5jb20iLCJpYXQiOjE2MzM3MzkwNDMsImV4cCI6MTYzMzk5ODI0M30._NZaXvHshuQ0WV_f7e1u60toog98a3t1WcAAy8Hdh60",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"newuser3\",\r\n    \"score\": 120\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://supervillain.herokuapp.com/v1/user",
+					"protocol": "https",
+					"host": [
+						"supervillain",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"v1",
+						"user"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
